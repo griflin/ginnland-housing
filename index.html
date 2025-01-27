@@ -58,7 +58,7 @@
 
    <!-- Hero Section -->
 <<!-- HTML -->
-section class="hero relative overflow-hidden bg-gray-50">
+<section class="hero relative overflow-hidden bg-gray-50">
     <!-- Desktop View -->
     <div class="relative bg-gray-50 py-16">
         <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -196,8 +196,8 @@ section class="hero relative overflow-hidden bg-gray-50">
             <!-- Property Modal -->
             <div id="propertyModal" class="fixed inset-0 z-50 hidden">
                 <div class="modal-overlay absolute inset-0 bg-black/70" onclick="closeModal()"></div>
-                <div class="modal-container relative h-full w-full flex items-center justify-center p-4">
-                    <div class="bg-white rounded-2xl max-w-6xl w-full overflow-hidden shadow-2xl">
+                <div class="modal-container relative h-full w-full flex items-center justify-center p-4 overflow-y-auto">
+                    <div class="bg-white rounded-2xl w-full max-w-6xl mx-4 overflow-hidden shadow-2xl">
                         <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 z-50">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -205,9 +205,9 @@ section class="hero relative overflow-hidden bg-gray-50">
                         </button>
                         
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                            <!-- Property Details -->
-                            <div class="p-8 space-y-6">
-                                <h2 class="text-3xl font-bold" id="modalTitle"></h2>
+                            <!-- Left Side - Property Details -->
+                            <div class="p-6 lg:p-8 space-y-6">
+                                <h2 class="text-2xl lg:text-3xl font-bold" id="modalTitle"></h2>
                                 <div class="space-y-6">
                                     <!-- Price and Size -->
                                     <div class="flex justify-between items-center bg-gray-50 p-4 rounded-xl">
@@ -220,7 +220,7 @@ section class="hero relative overflow-hidden bg-gray-50">
                                             <span class="block text-sm text-gray-500">Plot Size</span>
                                         </div>
                                     </div>
-
+            
                                     <!-- Key Details Grid -->
                                     <div class="grid grid-cols-2 gap-4">
                                         <div class="detail-item">
@@ -240,10 +240,10 @@ section class="hero relative overflow-hidden bg-gray-50">
                                             </svg>
                                             <div>
                                                 <span class="detail-value" id="modalElectricity"></span>
-                                                <span class="detail-label">Connection Available </span>
+                                                <span class="detail-label">Electricity</span>
                                             </div>
                                         </div>
-
+            
                                         <div class="detail-item">
                                             <svg class="detail-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
@@ -254,24 +254,40 @@ section class="hero relative overflow-hidden bg-gray-50">
                                             </div>
                                         </div>
                                     </div>
-
+            
                                     <!-- Amenities Section -->
                                     <div class="amenities-section">
                                         <h3 class="amenities-title">Amenities</h3>
                                         <div class="amenities-grid" id="modalAmenities"></div>
                                     </div>
-
+            
                                     <!-- Description -->
                                     <p class="text-gray-600 leading-relaxed" id="modalDescription">
                                         Premium residential plots with all modern amenities. Perfect for family homes 
+                                        with 24/7 security and community facilities.
                                     </p>
                                 </div>
                                 
-                                <a href="#contact" class="btn-primary inline-block mt-6">
-                                    schedule visit
-                                </a>
+                                <button class="btn-primary w-full mt-6">
+                                    Schedule Site Visit
+                                </button>
                             </div>
-
+            
+                            <!-- Right Side - Image Slider -->
+                            <div class="slider-container relative h-64 lg:h-96 bg-gray-100">
+                                <div class="slider-track flex transition-transform duration-500 ease-in-out"></div>
+                                <div class="slider-dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"></div>
+                                <button class="slider-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white">
+                                    ❮
+                                </button>
+                                <button class="slider-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white">
+                                    ❯
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                             <!-- Image Slider -->
                             <div class="slider-container relative h-96 bg-gray-100">
                                 <div class="slider-track flex transition-transform duration-500 ease-in-out"></div>
