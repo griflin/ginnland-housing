@@ -313,6 +313,7 @@ body {
 }
 /* Navigation Link Styles */
 .nav-link {
+    color: black; /* Change text color to black */
     position: relative;
     padding: 8px 12px;
     transition: all 0.3s ease;
@@ -331,44 +332,4 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
-}
-
-/* Mobile menu styles */
-.mobile-menu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in-out;
-}
-
-.mobile-menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* FAQ improvements */
-.faq-item i {
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active i {
-    transform: rotate(180deg);
-}
-
-/* Form improvements */
-.peer:focus ~ label,
-.peer:not(:placeholder-shown) ~ label {
-    color: #3b82f6;
-    transform: translateY(-0.5rem) scale(0.9);
-}
-
-/* Button hover effects enhancement */
-.btn-primary {
-    position: relative;
-    z-index: 1;
-}
-
-.btn-primary:active {
-    transform: translateY(1px);
 }
